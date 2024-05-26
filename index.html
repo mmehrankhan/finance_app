@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Finance Tracker</title>
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- google fonts end -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Finance App</h1>
+      <div class="input-section">
+        <h3>Enter Amount</h3>
+        <input type="number" id="amount" placeholder="Amount" />
+      </div>
+
+      <div class="buttons">
+        <button onclick="addIncome()">Income</button>
+        <button onclick="addExpenditure()">Expenditure</button>
+      </div>
+      <div class="summary">
+        <div class="summary-box">
+          <h2>Income</h2>
+          <p><span id="total-income">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Expenditure</h2>
+          <p><span id="total-expenditure">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Balance</h2>
+          <p id="balance"><span id="balance-value">0</span></p>
+        </div>
+        <div class="summary-box">
+          <h2>Status</h2>
+          <p id="savings"><span id="savings-value">-</span></p>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <h2>History</h2>
+        <table id="transaction-table">
+          <thead>
+            <tr>
+              <th>Description</th>
+              <th>Date</th>
+              <th>Time</th>
+              <th>Balance</th>
+            </tr>
+          </thead>
+          <tbody id="transaction-list">
+            <!-- Transaction rows will be added dynamically here -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
